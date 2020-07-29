@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "manage-book"
+    }
+  },
+  "defaultProject": "manage-book",
+  "cli": {
+    "analytics": "fec30f2e-6e67-4fee-ae41-d3736b82d83e"
+  }
 }
