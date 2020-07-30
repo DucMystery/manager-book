@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {IBook} from '../ibook';
+import {CategoryService} from '../../categories/category.service';
+import {BookService} from '../book.service';
+import {ICategory} from '../../categories/icategory';
 
 @Component({
   selector: 'app-book-list',
@@ -8,44 +11,22 @@ import {IBook} from '../ibook';
 })
 export class BookListComponent implements OnInit {
 
-  books: IBook[] = [];
+  books: IBook[];
+  categories: ICategory[];
 
-  getBookList() : IBook[] {
-    const books =[
-      {
-        id: 1,
-        name: 'Cong chua Be',
-        author:'Tuan chua be'
-      },
-      {
-        id: 2,
-        name: 'Cong chua Be',
-        author:'Tuan  be'
-      },
-      {
-        id: 3,
-        name: 'Tuan chua Be',
-        author:'Tuan chua be be'
-      },
-      {
-        id: 4,
-        name: 'Anh chua Be',
-        author:'Tuan'
-      },
 
-    ]
-    return books;
-  }
-
-  constructor() { }
+  constructor(private categoryService: CategoryService,
+              private bookService: BookService) { }
 
   ngOnInit(): void {
-    this.books = this.getBookList();
+    this.books = this.bookService.getAll();
+    this.categories = this.categoryService.getAll();
+
   }
 
   search(event) {
     let keyword = event;
-    this.books =(keyword) ? this.filterByKeyword(keyword) : this.getBookList();
+    this.books =(keyword) ? this.filterByKeyword(keyword) : this.bookService.getAll();
   }
 
   private filterByKeyword(keyword) {
