@@ -13,6 +13,7 @@ export class BookListComponent implements OnInit {
 
   books: IBook[];
   categories: ICategory[];
+  page: number =1;
 
 
   constructor(private categoryService: CategoryService,

@@ -54,7 +54,6 @@ export class EditBookComponent implements OnInit {
     this.book.author=data.author;
     this.book.cate_id=data.cate_id;
     this.router.navigate([''])
-    console.log(this.categoryService.getAll())
   }
 
 

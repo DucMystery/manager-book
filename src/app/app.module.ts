@@ -11,7 +11,8 @@ import { GroupComponent } from './group/group.component';
 import { AddBookComponent } from './books/add-book/add-book.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { EditBookComponent } from './books/edit-book/edit-book.component';
-
+// import {BookPageComponent} from './books/book-page/book-page.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,11 +23,13 @@ import { EditBookComponent } from './books/edit-book/edit-book.component';
     GroupComponent,
     AddBookComponent,
     EditBookComponent,
+    // BookPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

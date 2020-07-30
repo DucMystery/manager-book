@@ -29,6 +29,29 @@ export class BookService {
       name: 'Anh chua Be',
       cate_id: 2,
       author:'Tuan'
+    },    {
+      id: 5,
+      name: 'Anh chua Be',
+      cate_id: 2,
+      author:'Tuan'
+    },
+    {
+      id: 6,
+      name: 'Anh chua Be',
+      cate_id: 2,
+      author:'Tuan'
+    },
+    {
+      id: 7,
+      name: 'Anh chua Be',
+      cate_id: 2,
+      author:'Tuan'
+    },
+    {
+      id: 5,
+      name: 'Anh chua Be',
+      cate_id: 2,
+      author:'Tuan'
     },
 
   ]
